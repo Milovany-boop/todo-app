@@ -88,4 +88,13 @@ public class TodoListTest {
         assertTrue(t.search(null).isEmpty());
         assertTrue(t.search("zzz").isEmpty());
     }
+    @Test
+    void doneCanBeCalledRepeatedly() {
+        TodoList t = new TodoList();
+        t.add("a");
+
+        assertTrue(t.done(0));
+        assertTrue(t.done(0));
+        assertEquals("[x] a", t.getAll().getFirst());
+    }
 }
