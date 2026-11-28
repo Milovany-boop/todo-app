@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.todo.TodoAppTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-27T12:17:30.170Z" hostname="DESKTOP-SDGFLVC" time="0.172">
+<testsuite name="com.example.todo.TodoAppTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-28T08:42:28.327Z" hostname="DESKTOP-SDGFLVC" time="0.344">
   <properties/>
-  <testcase name="shouldReturnTaskDescription()" classname="com.example.todo.TodoAppTest" time="0.081"/>
+  <testcase name="shouldMarkTaskAsDone()" classname="com.example.todo.TodoAppTest" time="0.167"/>
+  <testcase name="shouldReturnTaskDescription()" classname="com.example.todo.TodoAppTest" time="0.006"/>
   <testcase name="shouldAddTaskAndIncreaseCount()" classname="com.example.todo.TodoAppTest" time="0.002"/>
-  <testcase name="newTaskShouldNotBeCompleted()" classname="com.example.todo.TodoAppTest" time="0.003"/>
+  <testcase name="shouldSearchTasksBySubstring()" classname="com.example.todo.TodoAppTest" time="0.014"/>
+  <testcase name="shouldClearAllTasks()" classname="com.example.todo.TodoAppTest" time="0.004"/>
+  <testcase name="newTaskShouldNotBeCompleted()" classname="com.example.todo.TodoAppTest" time="0.022"/>
+  <testcase name="shouldNotMarkTaskAsDoneWithInvalidIndex()" classname="com.example.todo.TodoAppTest" time="0.017"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

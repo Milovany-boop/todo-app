@@ -11,11 +11,9 @@ public class TodoApp {
         tasks.add(new Task(description));
     }
 
-
     public void clearTasks() {
         tasks.clear();
     }
-
 
     public boolean markTaskAsDone(int index) {
         if (index > 0 && index <= tasks.size()) {
@@ -24,7 +22,6 @@ public class TodoApp {
         }
         return false;
     }
-
 
     public List<Task> searchTasks(String query) {
         List<Task> result = new ArrayList<>();
@@ -47,7 +44,8 @@ public class TodoApp {
     public static void main(String[] args) {
         TodoApp app = new TodoApp();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Todo App started. Commands: add <text>, clear, done <index>, search <text>, exit");
+        // Добавили 'list' в подсказку
+        System.out.println("Todo App started. Commands: add <text>, list, clear, done <index>, search <text>, exit");
 
         while (true) {
             System.out.print("> ");
@@ -64,6 +62,18 @@ public class TodoApp {
                         System.out.println("Added: " + parts[1]);
                     } else {
                         System.out.println("Usage: add <text>");
+                    }
+                    break;
+                case "list": // Новая команда
+                    if (app.getTaskCount() == 0) {
+                        System.out.println("The task list is empty.");
+                    } else {
+                        System.out.println("Your tasks:");
+                        List<Task> allTasks = app.getTasks();
+                        for (int i = 0; i < allTasks.size(); i++) {
+                            Task t = allTasks.get(i);
+                            System.out.println((i + 1) + ". " + t.getDescription() + (t.isCompleted() ? " [DONE]" : ""));
+                        }
                     }
                     break;
                 case "clear":
